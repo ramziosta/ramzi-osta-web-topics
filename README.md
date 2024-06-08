@@ -1,7 +1,7 @@
 # Web Topics
 The first assignment to utilize HTML, CSS and Javascript to replicate the design and the functionalities of a demo website.
 
-Then the user lands on the page the following actions can be done:<br />
+How to interact with this demo app:<br />
 
 1- Navigate to the home screen using the Web Topics link. <br />
 2- Dark Mode button turns on Dark Mode. <br />
