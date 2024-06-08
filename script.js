@@ -5,12 +5,9 @@ function toggleThem() {
 }
 
 function toggleFavorites() {
-    if (modal.style.display === "none" || modal.style.display === "") {
-        modal.style.display = "block";
-    } else {
+    modal.style.display === "none" || modal.style.display === "" ?
+        modal.style.display = "block":
         modal.style.display = "none";
-    }
-    console.log("clicked");
 }
 
 function navigate() {

@@ -60,7 +60,7 @@
             <div class="info-2">
                 <p class="">Interested in this topic?</p>
                 <div class="button-container">
-                    <button>Add to Favorites <ion-icon name="heart"></ion-icon></button>
+                    <button onclick="toggleFavorites()">Add to Favorites <ion-icon name="heart"></ion-icon></button>
                     <p class="unlimited-credits">Unlimited Credits</p>
                 </div>
 
@@ -68,11 +68,22 @@
         </div>
     </div>
 </main>
-
+<div id="modal" class="modal" onclick="toggleFavorites()">
+    <h5>My Favorite Topics</h5>
+    <div class="modal-card">
+        <img src="https://picsum.photos/200" alt="an image" />
+        <div class="modal-card-details">
+            <p>Category</p>
+            <p>⭐️⭐️⭐️⭐️</p>
+        </div>
+    </div>
+</div>
 <footer class="footer">
     <p>Developed with <ion-icon name="heart"></ion-icon> 2023</p>
 </footer>
 
+
+<script src="script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
