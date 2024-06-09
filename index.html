@@ -10,10 +10,17 @@
 <nav class="nav">
     <a class="home" href="index.html">Web Topics</a>
     <div class="toggle-buttons">
-        <button class="button" onclick="toggleTheme()"><ion-icon name="moon-outline"></ion-icon>Dark Mode</button>
-        <button class="button" onclick="toggleFavorites()"><ion-icon name="heart-outline"></ion-icon>Favorites</button>
+        <button class="button" onclick="toggleTheme()">
+            <ion-icon name="moon-outline"></ion-icon>
+            Dark Mode
+        </button>
+        <button class="button" onclick="toggleFavorites()">
+            <ion-icon name="heart-outline"></ion-icon>
+            Favorites
+        </button>
     </div>
 </nav>
+
 
 <div class="header">
     <div class="left triangle"></div>
@@ -23,52 +30,109 @@
         <p>We have a new design that's fresh, modern, and easy to use.</p>
     </div>
 </div>
-
-<main class="main">
-    <div class="search-bar">
-        <label class="search-bar-placeholder">
-            <ion-icon name="search"></ion-icon>
-            <input type="text" placeholder="Search the website...">
-        </label>
-        <label class="selector">Sort by:
-            <select class="select">
-                <option value="default">Default</option>
-                <option value="category">Category</option>
-                <option value="topic">Topic</option>
-                <option value="name">Author</option>
-                <option value="rating">Rating</option>
-            </select>
-        </label>
-        <label class="selector">Filter by:
-            <select class="select">
-                <option value="default">Default</option>
-                <option value="category">Category</option>
-                <option value="topic">Topic</option>
-                <option value="name">Author</option>
-                <option value="rating">Rating</option>
-            </select>
-        </label>
-    </div>
-    <h4 class="num-topics">24 topics found</h4>
-    <div class="card" onclick="navigate()">
-        <img src="https://picsum.photos/200" alt="an image" />
-        <div class="card-details">
-            <div class="info-1">
-                <p>Category</p>
-                <h4>Topic</h4>
+<div class="view">
+    <main class="main">
+        <div class="search-bar">
+            <label class="search-bar-placeholder">
+                <ion-icon name="search"></ion-icon>
+                <input type="text" placeholder="Search the website...">
+            </label>
+            <div class="selector-view">
+                <label class="selector">Sort by:
+                    <select class="select">
+                        <option value="default">Default</option>
+                        <option value="category">Category</option>
+                        <option value="topic">Topic</option>
+                        <option value="name">Author</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </label>
+                <label class="selector">Filter by:
+                    <select class="select">
+                        <option value="default">Default</option>
+                        <option value="category">Category</option>
+                        <option value="topic">Topic</option>
+                        <option value="name">Author</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </label>
             </div>
-            <div class="info-2">
-                <p class="rating">⭐️⭐️⭐️⭐️</p>
-                <p>Author: <span class="author">Author Name</span></p>
+
+        </div>
+        <h4 class="num-topics">24 topics found</h4>
+        <div class="card-display">
+            <div class="card" onclick="navigate()">
+                <img src="https://picsum.photos/200" alt="an image"/>
+                <div class="card-details">
+                    <div class="info-1">
+                        <p>Category</p>
+                        <h4>Topic</h4>
+                    </div>
+                    <div class="info-2">
+                        <p class="rating">⭐️⭐️⭐️⭐️</p>
+                        <p>Author: <span class="author">Author Name</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="navigate()">
+                <img src="https://picsum.photos/200" alt="an image"/>
+                <div class="card-details">
+                    <div class="info-1">
+                        <p>Category</p>
+                        <h4>Topic</h4>
+                    </div>
+                    <div class="info-2">
+                        <p class="rating">⭐️⭐️⭐️⭐️</p>
+                        <p>Author: <span class="author">Author Name</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="navigate()">
+                <img src="https://picsum.photos/200" alt="an image"/>
+                <div class="card-details">
+                    <div class="info-1">
+                        <p>Category</p>
+                        <h4>Topic</h4>
+                    </div>
+                    <div class="info-2">
+                        <p class="rating">⭐️⭐️⭐️⭐️</p>
+                        <p>Author: <span class="author">Author Name</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="navigate()">
+                <img src="https://picsum.photos/200" alt="an image"/>
+                <div class="card-details">
+                    <div class="info-1">
+                        <p>Category</p>
+                        <h4>Topic</h4>
+                    </div>
+                    <div class="info-2">
+                        <p class="rating">⭐️⭐️⭐️⭐️</p>
+                        <p>Author: <span class="author">Author Name</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="navigate()">
+                <img src="https://picsum.photos/200" alt="an image"/>
+                <div class="card-details">
+                    <div class="info-1">
+                        <p>Category</p>
+                        <h4>Topic</h4>
+                    </div>
+                    <div class="info-2">
+                        <p class="rating">⭐️⭐️⭐️⭐️</p>
+                        <p>Author: <span class="author">Author Name</span></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</main>
-
+    </main>
+</div>
 <div id="modal" class="modal" onclick="toggleFavorites()">
     <h5>My Favorite Topics</h5>
     <div class="modal-card">
-        <img src="https://picsum.photos/200" alt="an image" />
+        <img src="https://picsum.photos/200" alt="an image"/>
         <div class="modal-card-details">
             <p>Category</p>
             <p>⭐️⭐️⭐️⭐️</p>
@@ -77,11 +141,14 @@
 </div>
 
 <footer class="footer">
-    <p>Developed with <ion-icon name="heart"></ion-icon> 2023</p>
+    <p>Developed with
+        <ion-icon name="heart"></ion-icon>
+        2023
+    </p>
 </footer>
 
-<script  src="script.js">
-    
+<script src="script.js">
+
 </script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
