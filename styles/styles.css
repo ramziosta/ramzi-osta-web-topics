@@ -5,8 +5,12 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--body-text);
 }
 
+.top{
+    background-color: var(--bg-top);
+}
 .nav {
     display: flex;
     flex-direction: row;
@@ -20,6 +24,7 @@ body {
     text-decoration: none;
     color: var(--brand-primary);
     cursor: pointer;
+    font-weight: 800;
 }
 
 .nav .home:hover {
@@ -34,8 +39,8 @@ body {
 }
 
 .nav .button {
-    color: black;
-    border: solid #c5c5c5 1px;
+    color: var(--body-text);
+    border: solid var(--lines-color) 1px;
     border-radius: 5px;
     padding: 5px 13px;
     background-color: var(--bg_body);
@@ -48,14 +53,10 @@ body {
     text-align: center;
 }
 
-.nav .button img {
-    height: 20px;
-    margin-right: 10px;
-}
 
 .nav .button:hover {
     background-color: var(--brand-primary);
-    color: white;
+    color: #FFFFFF;
 }
 
 .header {
@@ -64,12 +65,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100px;
-    background-color: var(--bg_default);
+    background-color: var(--bg-top);
     width: 100%;
     overflow: hidden;
 }
 
 .header .text {
+    margin-top: 15px;
     align-self: center;
     z-index: 3;
 }
@@ -99,7 +101,6 @@ body {
 }
 
 .view {
-    border: solid red 3px;
     display: flex;
     margin: 0 auto;
 }
@@ -111,41 +112,52 @@ body {
     overflow: hidden;
 }
 
+
+/* Search Bar */
+
 .main .search-bar {
-    border: red solid 2px;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 45px;
-    background-color: var(--bg_default);
     font-size: 16px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--body-text);
+    background-color: var(--bg_default);
 }
 
 .main .search-bar .search-bar-placeholder {
+    border-radius: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: var(--body-text);
+    background-color: var(--bg_default);
+}
+
+.search-icon {
+    margin-left: 5px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 .main .search-bar input {
-   width: 70vw;
-    height: 38px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-color: rgba(255, 255, 255, 0);
+    color: var(--body-text);
+    background-color: var(--bg_default);
+    border: none;
+    width: 70vw;
+    height: 40px;
+
 }
 
 .main .search-bar label {
     font-size: 10px;
-    color: #7e7e7e;
-    background-color: var(--bg_default);
+
     font-weight: 100;
 }
 
-.selector-view{
-    border: solid blue 1px;
+.selector-view {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -154,8 +166,10 @@ body {
 .main .search-bar .selector {
     display: flex;
     flex-direction: column;
-    border-left: solid 1px #d3d3d3;
-    padding: 0 5px;
+    align-items: flex-start;
+    border-left: solid 1px var(--lines-color);
+    color: var(--body-text);
+    padding:  5px 10px;
 }
 
 .main .search-bar .select {
@@ -168,8 +182,10 @@ body {
     font-weight: 100;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    color: grey;
+    color: var(--body-text);
+    margin-left: -4px;
 }
+
 
 .main .num-topics {
     margin: 10px 0;
@@ -182,14 +198,14 @@ body {
     gap: 10px;
 
 }
+
 .main .card {
     width: 220px;
     height: 280px;
     margin: 20px 0;
-    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg_default);
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -224,7 +240,7 @@ ion-icon {
 }
 
 ion-icon[name~="heart"] {
-    color: red;
+    color: var(--heart-color);
 }
 
 /*Favorites Modal */
@@ -234,7 +250,7 @@ ion-icon[name~="heart"] {
     width: 100%;
     height: 190px;
     background-color: var(--bg_default);
-    display: none; /* Initially hidden */
+    display: none; /* Initially hidden changes with JS */
     flex-direction: column;
     padding: 10px 40px;
     z-index: 1;
@@ -253,7 +269,7 @@ ion-icon[name~="heart"] {
 }
 
 .modal-card-details {
-    margin:5px;
+    margin: 5px;
 }
 
 .modal img {
@@ -265,7 +281,7 @@ ion-icon[name~="heart"] {
 
 /* Details Page */
 .details-main {
-    margin-top: 50px;
+    margin-top: 0;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -274,7 +290,7 @@ ion-icon[name~="heart"] {
 .details-header {
     position: absolute;
     z-index: -1;
-    background-color: var(--body-text);
+    background-color: rgb(45,45,45);
     width: 100%;
     height: 250px;
 }
@@ -284,9 +300,10 @@ ion-icon[name~="heart"] {
     flex-direction: column;
     justify-content: space-between;
     margin: 10px 20px;
-    color: var(--bg_default);
+    color: white;
     max-width: 500px;
     height: 60vh;
+
 }
 
 .details .title .category {
@@ -294,20 +311,20 @@ ion-icon[name~="heart"] {
 }
 
 .details .title .description {
-   margin: 10px 0;
+    margin: 10px 0;
 }
 
 .details .list {
     padding: 10px;
     background-color: var(--bg_default);
-    box-shadow: 0 0 10px #bfbfbf;
-    margin-top: 10px;
+    margin-top: 70px;
+    border-radius: 4px;
 }
 
 .details .list h4 {
     color: var(--body-text);
     padding: 5px;
-    border-bottom: 1px solid #bfbfbf;
+    border-bottom: 1px solid var(--lines-color);
 }
 
 .details .list .checklist {
@@ -319,11 +336,11 @@ ion-icon[name~="heart"] {
     flex-direction: row;
     align-items: center;
     padding: 5px 0;
-    border-bottom: 1px solid #bfbfbf;
+    border-bottom: 1px solid var(--lines-color);
 }
 
 .details .list .checklist ion-icon {
-    color: green;
+    color: var(--brand-secondary);
     margin-right: 5px;
 }
 

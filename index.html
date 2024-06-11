@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Web Topics</title>
 </head>
-<body>
+<body id="body" data-theme="light">
+<div class="top">
 <nav class="nav">
     <a class="home" href="index.html">Web Topics</a>
     <div class="toggle-buttons">
@@ -30,11 +31,12 @@
         <p>We have a new design that's fresh, modern, and easy to use.</p>
     </div>
 </div>
+</div>
 <div class="view">
     <main class="main">
         <div class="search-bar">
             <label class="search-bar-placeholder">
-                <ion-icon name="search"></ion-icon>
+                <ion-icon name="search" class="search-icon"></ion-icon>
                 <input type="text" placeholder="Search the website...">
             </label>
             <div class="selector-view">
@@ -57,75 +59,9 @@
                     </select>
                 </label>
             </div>
-
         </div>
         <h4 class="num-topics">24 topics found</h4>
-        <div class="card-display">
-            <div class="card" onclick="navigate()">
-                <img src="https://picsum.photos/200" alt="an image"/>
-                <div class="card-details">
-                    <div class="info-1">
-                        <p>Category</p>
-                        <h4>Topic</h4>
-                    </div>
-                    <div class="info-2">
-                        <p class="rating">⭐️⭐️⭐️⭐️</p>
-                        <p>Author: <span class="author">Author Name</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" onclick="navigate()">
-                <img src="https://picsum.photos/200" alt="an image"/>
-                <div class="card-details">
-                    <div class="info-1">
-                        <p>Category</p>
-                        <h4>Topic</h4>
-                    </div>
-                    <div class="info-2">
-                        <p class="rating">⭐️⭐️⭐️⭐️</p>
-                        <p>Author: <span class="author">Author Name</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" onclick="navigate()">
-                <img src="https://picsum.photos/200" alt="an image"/>
-                <div class="card-details">
-                    <div class="info-1">
-                        <p>Category</p>
-                        <h4>Topic</h4>
-                    </div>
-                    <div class="info-2">
-                        <p class="rating">⭐️⭐️⭐️⭐️</p>
-                        <p>Author: <span class="author">Author Name</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" onclick="navigate()">
-                <img src="https://picsum.photos/200" alt="an image"/>
-                <div class="card-details">
-                    <div class="info-1">
-                        <p>Category</p>
-                        <h4>Topic</h4>
-                    </div>
-                    <div class="info-2">
-                        <p class="rating">⭐️⭐️⭐️⭐️</p>
-                        <p>Author: <span class="author">Author Name</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" onclick="navigate()">
-                <img src="https://picsum.photos/200" alt="an image"/>
-                <div class="card-details">
-                    <div class="info-1">
-                        <p>Category</p>
-                        <h4>Topic</h4>
-                    </div>
-                    <div class="info-2">
-                        <p class="rating">⭐️⭐️⭐️⭐️</p>
-                        <p>Author: <span class="author">Author Name</span></p>
-                    </div>
-                </div>
-            </div>
+        <div class="card-display" id="card-display">
         </div>
     </main>
 </div>
