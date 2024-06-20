@@ -1,5 +1,3 @@
-
-
 let modal = document.getElementById("modal");
 let body = document.getElementById("body");
 let cardDisplay = document.getElementById("card-display");
@@ -18,7 +16,7 @@ function toggleFavorites() {
         modal.style.display = "none";
 }
 
-function navigate() {
+function navigate(card) {
     console.log("clicked");
     window.location.href = "details.html";
 }
@@ -79,3 +77,23 @@ async function fetchData() {
 
 // Fetch data and trigger onload
 fetchData();
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const cardId = urlParams.get('id');
+
+    // Fetch the data
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            const cardData = data.find(item => item.id === cardId);
+            if (cardData) {
+                // Display the data on the page
+                document.getElementById('card-title').innerText = cardData.topic;
+                document.getElementById('card-description').innerText = cardData.description;
+                // Continue populating other elements as needed
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});

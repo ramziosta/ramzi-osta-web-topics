@@ -38,6 +38,5 @@ body[data-theme="dark"] {
     --body-text: #EDEDED;
     --heart-color: #DC143C;
     --bg-top: #000000;
-;
-
+    --details-bg: #2D2D2DFF;
 }

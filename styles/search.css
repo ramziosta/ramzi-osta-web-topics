@@ -1,16 +1,15 @@
 body {
     background-color: var(--bg_body);
-    display: flex;
-    flex-direction: column;
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
     color: var(--body-text);
 }
 
-.top{
+.top {
     background-color: var(--bg-top);
 }
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -70,7 +69,7 @@ body {
 }
 
 .header .text {
-    margin-top: 15px;
+    margin-top: 40px;
     align-self: center;
     z-index: 3;
 }
@@ -107,64 +106,60 @@ body {
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
-    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    padding: 10px;
 }
 
-
 /* Search Bar */
-
-.main .search-bar {
+.search-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 45px;
     font-size: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: var(--body-text);
     background-color: var(--bg_default);
+    margin: 0 10px;
+
 }
 
-.main .search-bar .search-bar-placeholder {
-    border-radius: 8px;
+.search-bar-placeholder {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+
+}
+
+.input {
+
+    width: 100%;
     color: var(--body-text);
     background-color: var(--bg_default);
+    border-radius: 8px;
+    border: none;
+}
+
+label {
+    font-size: 10px;
+    font-weight: 100;
 }
 
 .search-icon {
     margin-left: 5px;
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
-}
-
-.main .search-bar input {
-    color: var(--body-text);
-    background-color: var(--bg_default);
-    border: none;
-    width: 70vw;
-    height: 40px;
-
-}
-
-.main .search-bar label {
-    font-size: 10px;
-
-    font-weight: 100;
 }
 
 .selector-view {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 10px;
 }
 
-.main .search-bar .selector {
+.selector {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -173,7 +168,7 @@ body {
     padding:  5px 10px;
 }
 
-.main .search-bar .select {
+.select {
     display: flex;
     flex-direction: column;
     border: none;
@@ -187,62 +182,53 @@ body {
     margin-left: -4px;
 }
 
-
-.main .num-topics {
+/*result section*/
+.num-topics {
     margin: 10px 0;
 }
-
-.main .card-display {
+.card-display {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     width: 100%;
     gap: 10px;
 
 }
-
-.main .card {
-    width: 220px;
-    height: 280px;
-    margin: 20px 0;
+.card {
+    width: 200px;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--bg_default);
-    display: flex;
-    flex-direction: column;
     cursor: pointer;
 }
-
-.main .card:hover {
+.card:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-
-.main .card img {
+.card img {
     border-radius: 8px 8px 0 0;
     height: 150px;
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
-
-.main .card .card-details {
+.card-details {
+    font-size:  0.9rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 5px 7px;
-    height: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 15px;
+}
+.info-1 {
+    margin-bottom: 10px;
 }
 
-.main .card .card-details .rating {
+.rating {
     margin-bottom: 5px;
 }
 
-ion-icon {
-    padding: 0 5px;
-}
-
-ion-icon[name~="heart"] {
-    color: var(--heart-color);
-}
 
 /*Favorites Modal */
 .modal {
@@ -280,139 +266,55 @@ ion-icon[name~="heart"] {
     border-top-left-radius: 8px;
 }
 
-/* Details Page */
-.details-main {
-    margin-top: 0;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-}
-
-.details-header {
-    position: absolute;
-    z-index: -1;
-    background-color: rgb(45,45,45);
-    width: 100%;
-    height: 250px;
-}
-
-.details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 10px 20px;
-    color: white;
-    max-width: 500px;
-    height: 60vh;
-
-}
-
-.details .title .category {
-    color: var(--brand-secondary);
-}
-
-.details .title .description {
-    margin: 10px 0;
-}
-
-.details .list {
-    padding: 10px;
-    background-color: var(--bg_default);
-    margin-top: 70px;
-    border-radius: 4px;
-}
-
-.details .list h4 {
-    color: var(--body-text);
-    padding: 5px;
-    border-bottom: 1px solid var(--lines-color);
-}
-
-.details .list .checklist {
-    color: var(--body-text);
-}
-
-.details .list .checklist li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--lines-color);
-}
-
-.details .list .checklist ion-icon {
-    color: var(--brand-secondary);
-    margin-right: 5px;
-}
-
-.card-details {
-    margin-top: 20px;
-    background-color: var(--bg_default);
-    color: var(--body-text);
-    height: 360px;
-
-}
-
-.card-details img {
-    width: 300px;
-    height: 180px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.card-details .card-info .info-1 {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-}
-
-.card-details .card-info .info-1 > * {
-    padding-right: 5px;
-}
-
-.card-details .card-info .info-2 {
-    margin: 10px 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-details .card-info .info-2 .unlimited-credits {
-    font-weight: 100;
-    font-size: 10px;
-    margin: 4px;
-    color: var(--body-text);
-}
-
-.card-details .card-info .info-2 .button-container {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-details .card-info .info-2 .button-container button {
-    width: 200px;
-    height: 40px;
-    padding: 10px;
-    background-color: var(--brand-secondary);
-    color: #fff;
-    border: none;
-    font-size: 1.1rem;
-}
-
-.card-details .card-info .info-2 .button-container button:hover {
-    cursor: pointer;
-    background-color: var(--brand-primary);
-}
-
+/*Footer*/
 .footer {
-    position: fixed;
-    bottom: 0;
-    z-index: -1;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
     width: 100%;
     height: 50px;
+
+}
+
+/* Accents*/
+ion-icon {
+    padding: 0 5px;
+}
+
+ion-icon[name~="heart"] {
+    color: var(--heart-color);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    .search-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar-placeholder{
+        padding: 15px 0;
+        border-bottom: solid 1px var(--lines-color);
+    }
+
+    .selector-view {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .selector {
+        width: 100%;
+    }
+
+    .card-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+
 }
