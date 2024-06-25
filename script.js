@@ -38,7 +38,7 @@ window.onload = function (data) {
         let author = document.createElement("p");
 
         // Set attributes and content
-        img.src = `/assets/logos/${item.image}`;
+        img.src = `./assets/logos/${item.image}`;
         img.alt = item.topic;
         category.className = "category";
         category.innerText = item.category;
