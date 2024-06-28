@@ -37,13 +37,35 @@ window.onload = function (data) {
         let rating = document.createElement("p");
         let author = document.createElement("p");
 
+        // Create star icons for full star and half star
+        const starIcon = document.createElement("ion-icon");
+        starIcon.setAttribute("name", "star");
+        starIcon.style.color = "gold";
+        const halfStarIcon = document.createElement("ion-icon");
+        halfStarIcon.setAttribute("name", "star-half");
+        halfStarIcon.style.color = "gold";
+
         // Set attributes and content
         img.src = `https://ramziosta.github.io/ramzi-osta-web-topics/assets/logos/${item.image}`;
         img.alt = item.topic;
         category.className = "category";
+        category.style.fontSize = "10px";
         category.innerText = item.category;
         topic.innerText = item.topic;
-        rating.innerText = `⭐⭐⭐️${item.rating}`;
+
+        // star rating calculation
+        if (item.rating) {
+            let fullStars = Math.floor(item.rating);
+            let halfStars = item.rating - fullStars;
+            for (let i = 0; i < fullStars; i++) {
+                const star = starIcon.cloneNode(true);
+                rating.appendChild(star);
+            }
+            if (halfStars > 0) {
+                rating.appendChild(halfStarIcon.cloneNode(true));
+            }
+        }
+
         author.innerHTML = item.name;
         cardDetails.className = "card-details";
         info1.className = "info-1";
