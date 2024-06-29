@@ -216,7 +216,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.main .card img {
+.main .card-display .card .card-img {
     border-radius: 8px 8px 0 0;
     height: 150px;
     width: 100%;
@@ -340,8 +340,7 @@ ion-icon[name~="heart"] {
     border-bottom: 1px solid var(--lines-color);
 }
 
-.details .list .checklist ion-icon {
-    color: var(--brand-secondary);
+ .checkmark{
     margin-right: 5px;
 }
 

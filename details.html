@@ -34,10 +34,10 @@
     <div class="details-header"></div>
     <div class="details">
         <div class="title">
-            <p class="category">Category</p>
-            <h3>Topic</h3>
-            <p>⭐️⭐️⭐️⭐️⭐️</p>
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quasi. Quaerat, quos.
+            <p class="category" id="details-category">Category</p>
+            <h3 id="details-topic">Topic</h3>
+            <p class="rating" id="details-rating">⭐️⭐️⭐️⭐️⭐️</p>
+            <p class="description" id="details-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quasi. Quaerat, quos.
                 Quidem, quasi. Quaerat,
                 quos. Quidem, quasi. Quaerat, quos. Quidem, quasi. Quaerat, quos. Quidem, quasi. Quaerat, quos. Quidem,
                 quasi. Quaerat, quos. Quidem, quasi. Quaerat, quos. Quidem, quasi.
@@ -45,8 +45,8 @@
         </div>
 
         <div class="list">
-            <h4>HTML Sub Topics</h4>
-            <ul class="checklist">
+            <h4 id="sub-topics">HTML Sub Topics</h4>
+            <ul class="checklist" id="checklist">
                 <li>
                     <ion-icon name="checkmark-circle-outline"></ion-icon>
                     Lorem ipsum dolor sit amet.
@@ -76,7 +76,7 @@
     </div>
 
     <div class="card-details">
-        <img src="https://picsum.photos/200" alt="an image"/>
+        <img id="card-details-image" src="https://picsum.photos/200" alt="an image"/>
         <div class="card-info">
             <div class="info-1">
                 <h4>Category </h4>
@@ -86,7 +86,7 @@
             <div class="info-2">
                 <p class="">Interested in this topic?</p>
                 <div class="button-container">
-                    <button onclick="toggleFavorites()">Add to Favorites
+                    <button onclick="addToFavorites('${cardId}')">Add to Favorites
                         <ion-icon name="heart"></ion-icon>
                     </button>
                     <p class="unlimited-credits">Unlimited Credits</p>
